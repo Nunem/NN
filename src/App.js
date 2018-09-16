@@ -1,18 +1,23 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import { Link } from "react-router-dom";
-import SwitchDemo from "./SwitchDemo";
+import Articles from "./Articles";
+import Context from "./Context"
 
-const App = () => (
-  <div>
-    <div
-      style={{
-        fontSize: "3em",
-        margin: "25px"
-      }}
-    >
-      <SwitchDemo />
-    </div>
-  </div>
-);
+class App extends PureComponent{
+  state={
+    currentPage:1,
+    changePage:newPage=>this.setState({currentPage:newPage})
+  }
+  render(){
+
+    return(
+      <div>
+          <Context.Provider value={this.state}>
+              <Articles/>
+          </Context.Provider>
+      </div>
+    )
+  }
+};
 
 export default App;

@@ -14,7 +14,7 @@ webUrl:"https://www.theguardian.com/sport/live/2018/sep/07/county-cricket-nottin
 onst Homepage = () => <div>HOMEPAGE</div>;
 const About = () => <div>ABOUT</div>;
 
-const SwitchDemo = () => (
+const Articles = () => (
   <Switch>
     <Route path="/about" component={About} />
     <Route path="/" component={Homepage} />
